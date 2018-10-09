@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
@@ -10,13 +12,15 @@ public class TeaMaker {
 }
 
 class TeaBag {
+public static void main(String[] args) {}
+	
 
 	public final static String GREEN = "Green";
 	public final static String MINT = "Mint";
 	public final static String CHAMOMILE = "Chamomile";
 	public final static String PASSION_FRUIT = "Passion Fruit";
-
-	private String flavor;
+	
+	private String flavor= JOptionPane.showInputDialog("what type of tea do you want? green, mint, chamoile, or paaion fruit?");
 
 	TeaBag(String flavor) {
 		this.flavor = flavor;
