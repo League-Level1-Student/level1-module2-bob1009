@@ -20,7 +20,7 @@ public static void main(String[] args) {}
 	public final static String CHAMOMILE = "Chamomile";
 	public final static String PASSION_FRUIT = "Passion Fruit";
 	
-	private String flavor= JOptionPane.showInputDialog("what type of tea do you want? green, mint, chamoile, or paaion fruit?");
+	private String flavor;
 
 	TeaBag(String flavor) {
 		this.flavor = flavor;
@@ -61,8 +61,10 @@ class Cup {
 
 	void makeTea(TeaBag teabag, Kettle.Water hotWater) {
 		this.teabag = teabag;
-		if (hotWater.isHot())
+		if (hotWater.isHot()) {
 			System.out.println("Making hot " + teabag.getFlavor() + " tea.");
+			System.out.println("your "+ teabag.getFlavor()+" tea is ready, Enjoy! :)");		
+		}
 		else
 			System.out.println("Can't make tea with cold water! ");
 	}
